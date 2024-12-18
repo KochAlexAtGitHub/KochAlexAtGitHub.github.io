@@ -1,5 +1,6 @@
 <script>
-    path = window.location.href;      
+    const oldPath  = window.location.href;
+    var path = oldPath;
     var strSoftware = "software/";
     if (path.includes(strSoftware))
     {
@@ -11,7 +12,12 @@
     }
 
     if (path.endsWith("/")) {
-        const newPath = path.slice(0, -1);
-        window.location.replace(newPath);
+        path = path.slice(0, -1);        
     }
+
+    if (path =! oldPath)
+    {
+        window.location.replace(path);
+    }
+    
 </script>
