@@ -1,7 +1,17 @@
 <script>
-    const path = window.location.pathname;
+    path = window.location.pathname;      
+    var strSoftware = "software/";
+    if (path.includes(strSoftware))
+    {
+        var idx1 = path.indexOf(strSoftware);
+        var idx2 = idx1 + strSoftware.length;
+        var pathLeft = path.slice(0, idx1);
+        var pathRight = path.slice(idx2, path.length);
+        path = pathLeft + pathRight;
+    }
+
     if (path.endsWith("/")) {
-        const newPath = path.slice(0, -1) + ".html";
+        const newPath = path.slice(0, -1);
         window.location.replace(newPath);
     }
 </script>
