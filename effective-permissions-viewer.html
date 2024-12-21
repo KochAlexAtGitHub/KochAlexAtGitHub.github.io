@@ -63,13 +63,16 @@
                 </button>
             </div>
 
-
-
             <h1 class="mb-5">Youtube Video</h1>
-            <div class="ratio ratio-16x9 m-5">
-                <iframe src="https://www.youtube.com/embed/w6c6Tqgo_sg?si=sJaUrYR8enGWrrWj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
 
+            <div id="yt_cont_perm_vw_tut" class="mb-5">
+                <p class="fs-5">YouTube content is not displayed due to your cookie settings. 
+                    Accept cookies to agree to load and display content from YouTube.                    
+                </p>
+                <div class="d-flex justify-content-center">
+                    <button class="btn btn-success" onclick="acceptCookies('yt_cont_perm_vw_tut')">Accept cookies</button>
+                </div>                                             
+            </div>           
 
             <h1 class="mb-5">Get Effective Permissions Viewer today</h1>
 
@@ -164,6 +167,8 @@
             <br />
             <br />
         </main>
+
+        <script src="cookies-include.js"></script>
 
         <footer class="border-top footer text-muted" style="padding: 1rem;">
             <div class="container">
